@@ -19,6 +19,25 @@ module.exports = function(cnfg){
 					}
 				);
 				break;
+			case "/formxml":
+				response.writeHead(200, cnfg.mime.plain);
+				response.end(parsed.query.nom+" a "+parsed.query.age+" ans et est "+parsed.query.prf);
+				break;
+			case "/formpost":
+				var datas = "";
+				request
+					.on("data", function(data){
+						if(data.toString().length<1000){
+							if(datas.length<1000){
+								datas += data.toString();
+							};
+						};
+					})
+					.on("end", function(){
+						response.writeHead(200, cnfg.mime.plain);
+						response.end(datas);
+					})
+				break;
 			default:
 				fs.createReadStream(path.join(process.cwd(), cnfg.static, parsed.pathname))
 					.on("open", function(){

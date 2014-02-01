@@ -5,14 +5,26 @@
 	<title>TEST</title>
 </head>
 <body>
-	<h1>TEST : Salut tout le monde</h1>
+	<h2>Trasmission des données par la méthode GET</h2>
 	<form action="/formget">
 		<table>
 			<tr><td>NOM</td><td><input name="nom"/></td></tr>
 			<tr><td>AGE</td><td><input name="age"/></td></tr>
 		</table>
-		<input type="submit" value="Valider"/>
-		<input type="reset" value="Effacer"/>
+		<input type="submit" value="Valider GET"/>
+		<input type="reset" value="Effacer 'get'"/>
 	</form>
+	<h2>Trasmission des données par la méthode POST</h2>
+	<form action="/formpost" method="post">
+		Profession<input name="prf"/>
+		<input type="submit" value="Valider POST"/>
+		<input type="reset" value="Effacer 'post'"/>
+	</form>
+	<h2>Transmission des données via XMLHttpRequest</h2>
+	<div>
+		<select id="slt" size="4"></select>
+		<input type="button" id="btnSend" value="Transmission"/>
+	</div>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

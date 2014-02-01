@@ -1,0 +1,20 @@
+{
+  "name": "test_nodejs",
+  "version": "0.0.1",
+  "description": "Test pour node.js et module http",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no repository"
+  },
+  "keywords": [
+    "pjdf974"
+  ],
+  "author": "pjdf974",
+  "license": "BSD-2-Clause"
+  }
+}

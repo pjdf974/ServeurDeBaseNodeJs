@@ -1,0 +1,13 @@
+{
+	"port":12345,
+	"host":"localhost",
+	"index":"index.html",
+	"static":"public",
+	"mime":{
+		".html":{"content-type":"text/html"},
+		".css":{"content-type":"text/css"},
+		".js":{"content-type":"text/javascript"},
+		"plain":{"content-type":"text/plain; charset=utf8"},
+		"error":{"location":"error.html"}
+	}
+}

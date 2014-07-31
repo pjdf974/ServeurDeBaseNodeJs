@@ -5,6 +5,6 @@ var server = require("http").createServer
 
 server()
 	.on("request", hReq(cnfg))
-	.listen(cnfg.port, hLis(cnfg));
+	.listen(cnfg.port, cnfg.host, hLis(cnfg));
 
 
